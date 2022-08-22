@@ -1,0 +1,34 @@
+<section class="container">
+  <section class="phx-hero">
+    <h1><%= gettext "Welcome to %{name}!", name: "Twilixir-Bot" %></h1>
+    <p>This is the logged in page!</p>
+    <%= if @current_user do %>
+    <p>Current User: <%= @current_user.display_name %></p>
+    <% end %>
+
+    <button phx-click="join_channel">Join Channel</button>
+  </section>
+
+  <section class="row">
+    <h2>Channels Using</h2>
+  </section>
+  
+  <section class="row">    
+    <table>
+      <thead>
+        <tr>
+          <th>Channel Name</th>
+          <th>Viewers</th>
+          <th>Uptime</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>thielking_dev</td>
+          <td>12312312</td>
+          <td>24:59:59</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</section>

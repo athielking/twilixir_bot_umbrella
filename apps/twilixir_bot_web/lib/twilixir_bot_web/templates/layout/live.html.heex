@@ -1,0 +1,31 @@
+<main class="wrapper">
+  <nav class="navigation">
+    <section class="container">
+      <a class="navigation-title" href="https://hexdocs.pm/" title="Twilixir Bot - A twitch bot built on twitch">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#606c76" class="bi bi-twitch" viewBox="0 0 16 16">
+          <path d="M3.857 0 1 2.857v10.286h3.429V16l2.857-2.857H9.57L14.714 8V0H3.857zm9.714 7.429-2.285 2.285H9l-2 2v-2H4.429V1.143h9.142v6.286z"/>
+          <path d="M11.857 3.143h-1.143V6.57h1.143V3.143zm-3.143 0H7.571V6.57h1.143V3.143z"/>
+        </svg>
+        <h1 class="title">Twilixir Bot</h1>
+      </a>
+      <ul class="navigation-list float-right">
+        <%= if @current_user do %>
+          <li class="navigation-item"><%= @current_user.email %></li>
+          <li class="navigation-item"><%= link "Settings", to: Routes.user_settings_path(@socket, :edit), class: "navigation-link"%></li>
+          <li class="navigation-item"><%= link "Log out", to: Routes.user_session_path(@socket, :delete), method: :delete, class: "navigation-link" %></li>
+        <% else %>                  
+          <li class="navigation-item"><%= link "Log in", to: Routes.login_index_path(@socket, :index), class: "navigation-link"%></li>
+        <% end %>
+      </ul>
+    </section>
+  </nav>
+  <p class="alert alert-info" role="alert"
+    phx-click="lv:clear-flash"
+    phx-value-key="info"><%= live_flash(@flash, :info) %></p>
+
+  <p class="alert alert-danger" role="alert"
+    phx-click="lv:clear-flash"
+    phx-value-key="error"><%= live_flash(@flash, :error) %></p>
+
+  <%= @inner_content %>
+</main>

@@ -1,0 +1,101 @@
+/* Includes some default style for the starter application.
+ * This can be safely deleted to start fresh.
+ */
+
+/* Milligram v1.4.1 https://milligram.github.io
+ * Copyright (c) 2020 CJ Patoilo Licensed under the MIT license
+ */
+ 
+.navigation {
+  background: #f4f5f6;
+  border-bottom: .1rem solid #d1d1d1;
+  display: block;
+  height: 5.2rem;
+  left: 0;
+  max-width: 100%;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.navigation .container {
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+.navigation .navigation-link, .navigation .navigation-title, .navigation .title {
+	display: inline;
+	font-size: 1.6rem;
+	line-height: 5.2rem;
+	padding: 0;
+	text-decoration: none;
+}
+
+.navigation .navigation-list {
+	list-style: none;
+	margin-bottom: 0;
+	margin-right: 5rem;
+}
+
+@media (min-width: 80rem) {
+  .navigation .navigation-list {
+	  margin-right: 0;
+  }
+}
+
+.navigation .navigation-item {
+	float: left;
+	margin-bottom: 0;
+	margin-left: 2.5rem;
+	position: relative;
+}
+
+/* Headers
+header {
+  width: 100%;
+  background: #fdfdfd;
+  border-bottom: 1px solid #eaeaea;
+  margin-bottom: 2rem;
+}
+header section {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+header section :first-child {
+  order: 2;
+}
+header section :last-child {
+  order: 1;
+}
+header nav ul,
+header nav li {
+  margin: 0;
+  padding: 0;
+  display: block;
+  text-align: right;
+  white-space: nowrap;
+}
+header nav ul {
+  margin: 1rem;
+  margin-top: 0;
+}
+header nav a {
+  display: block;
+} */
+
+/* @media (min-width: 40.0rem) { /* Small devices (landscape phones, 576px and up) */
+/* header section {
+    flex-direction: row;
+  }
+  header nav ul {
+    margin: 1rem;
+  }
+  .phx-logo {
+    flex-basis: 527px;
+    margin: 2rem 1rem;
+  }
+} */
