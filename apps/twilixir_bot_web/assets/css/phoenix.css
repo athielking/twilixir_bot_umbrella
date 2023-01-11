@@ -52,6 +52,11 @@
 	position: relative;
 }
 
+.navigation + .container {
+  padding-top: 7.5rem;
+  padding-bottom: 7.5rem;
+}
+
 /* Headers
 header {
   width: 100%;

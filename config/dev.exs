@@ -4,7 +4,7 @@ import Config
 config :twilixir_bot, TwilixirBot.Repo,
   username: "postgres",
   password: "postgres",
-  hostname: "192.168.1.11",
+  hostname: "10.0.0.3",
   database: "twilixir_bot_dev",
   stacktrace: true,
   show_sensitive_data_on_connection_error: true,

@@ -33,7 +33,7 @@ defmodule TwilixirBotWeb.OauthController do
     |> Tesla.get!("/users")
     |> handle_user_response
 
-    TwilixirBot.Accounts.store_user_refresh_token(user, refresh_token)
+    TwilixirBot.Accounts.store_user_refresh_token(user, %{"refresh_token" => refresh_token})
   end
 
   defp handle_token_response(_resp) do
